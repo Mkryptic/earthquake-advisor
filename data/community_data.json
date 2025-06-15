@@ -1,0 +1,121 @@
+{
+  "emergency_contacts": {
+    "myanmar": {
+      "emergency_hotline": "999",
+      "fire_brigade": "191",
+      "police": "199",
+      "medical_emergency": "192",
+      "disaster_management": "+95-1-384-024"
+    },
+    "thailand": {
+      "emergency_hotline": "191",
+      "tourist_police": "1155",
+      "medical_emergency": "1669",
+      "fire_brigade": "199",
+      "disaster_management": "+66-2-124-9978"
+    },
+    "international": {
+      "red_cross": "+41-22-734-6001",
+      "who_emergency": "+41-22-791-2111"
+    }
+  },
+  "hospitals": {
+    "bangkok": [
+      {
+        "name": "Bumrungrad International Hospital",
+        "address": "33 Sukhumvit 3, Bangkok 10110",
+        "phone": "+66-2-667-1000",
+        "emergency_24h": true,
+        "trauma_center": true
+      },
+      {
+        "name": "Bangkok Hospital",
+        "address": "2 Soi Soonvijai 7, New Petchburi Rd, Bangkok 10310",
+        "phone": "+66-2-310-3000",
+        "emergency_24h": true,
+        "trauma_center": true
+      }
+    ],
+    "yangon": [
+      {
+        "name": "Yangon General Hospital",
+        "address": "Bogyoke Aung San Road, Yangon",
+        "phone": "+95-1-256-112",
+        "emergency_24h": true,
+        "trauma_center": true
+      },
+      {
+        "name": "Asia Royal Hospital",
+        "address": "Bahan Township, Yangon",
+        "phone": "+95-1-511-808",
+        "emergency_24h": true,
+        "trauma_center": false
+      }
+    ]
+  },
+  "evacuation_centers": {
+    "bangkok": [
+      {
+        "name": "Lumpini Park",
+        "address": "Rama IV Road, Bangkok 10330",
+        "capacity": 10000,
+        "facilities": ["open_space", "water", "medical_station"]
+      },
+      {
+        "name": "Chatuchak Park",
+        "address": "Phahon Yothin Road, Bangkok 10900",
+        "capacity": 8000,
+        "facilities": ["open_space", "water", "restrooms"]
+      }
+    ],
+    "yangon": [
+      {
+        "name": "People's Park",
+        "address": "Dagon Township, Yangon",
+        "capacity": 5000,
+        "facilities": ["open_space", "water"]
+      },
+      {
+        "name": "Mahabandoola Garden",
+        "address": "Kyauktada Township, Yangon",
+        "capacity": 3000,
+        "facilities": ["open_space", "medical_station"]
+      }
+    ]
+  },
+  "earthquake_zones": {
+    "high_risk": [
+      "Northern Myanmar",
+      "Western Thailand",
+      "Myanmar-Thailand Border"
+    ],
+    "moderate_risk": [
+      "Central Myanmar",
+      "Central Thailand",
+      "Eastern Myanmar"
+    ],
+    "recent_activity": {
+      "bangkok_myanmar_2024": {
+        "magnitude": 6.8,
+        "depth": "10 km",
+        "location": "Myanmar-Thailand Border",
+        "date": "2024-01-15",
+        "affected_areas": ["Bangkok", "Yangon", "Chiang Mai"]
+      }
+    }
+  },
+  "languages": [
+    {
+      "code": "en",
+      "name": "English"
+    },
+    {
+      "code": "th", 
+      "name": "Thai"
+    },
+    {
+      "code": "my",
+      "name": "Burmese"
+    }
+  ]
+} 

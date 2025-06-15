@@ -1,0 +1,262 @@
+{
+  "scenarios": [
+    {
+      "id": "home_night",
+      "title": "Nighttime Earthquake at Home",
+      "description": "It's 2:13 AM. You're sleeping in your second-floor apartment in Bangkok when a 6.8 magnitude earthquake begins. The shaking is strong and getting stronger. Your bed is moving, and you can hear things falling in other rooms.",
+      "location": "apartment",
+      "time": "night",
+      "magnitude": 6.8,
+      "choices": [
+        {
+          "id": "stay_bed",
+          "text": "Stay in bed and cover head with pillow",
+          "correct": true,
+          "explanation": "Correct! Drop, Cover, and Hold On. In bed, stay there, cover your head and neck with a pillow, and hold on.",
+          "score": 100
+        },
+        {
+          "id": "run_outside",
+          "text": "Jump up and run outside immediately",
+          "correct": false,
+          "explanation": "Dangerous! Running during shaking increases injury risk. Most injuries occur when people try to move during an earthquake.",
+          "score": 20
+        },
+        {
+          "id": "doorway",
+          "text": "Get to a doorway quickly",
+          "correct": false,
+          "explanation": "Outdated advice! Doorways are not safer than other parts of the building. Drop, Cover, and Hold On is better.",
+          "score": 40
+        }
+      ],
+      "follow_up": "What should you do after the shaking stops?",
+      "follow_up_choices": [
+        {
+          "id": "check_injuries",
+          "text": "Check for injuries and hazards before moving",
+          "correct": true,
+          "explanation": "Correct! Check yourself and others for injuries. Look for hazards like gas leaks, broken glass, or structural damage.",
+          "score": 100
+        },
+        {
+          "id": "rush_outside",
+          "text": "Rush outside immediately to check the building",
+          "correct": false,
+          "explanation": "Wait! Check for hazards first. Broken glass, debris, or aftershocks could cause injury.",
+          "score": 30
+        }
+      ]
+    },
+    {
+      "id": "office_day",
+      "title": "Earthquake at the Office",
+      "description": "You're working at your desk on the 15th floor of an office building in Yangon when a strong earthquake hits. Your computer monitor is shaking, and colleagues are shouting. The building is swaying noticeably.",
+      "location": "office",
+      "time": "day",
+      "magnitude": 7.1,
+      "choices": [
+        {
+          "id": "under_desk",
+          "text": "Drop under your desk and hold on",
+          "correct": true,
+          "explanation": "Correct! Drop, Cover, and Hold On. Your desk provides protection from falling objects.",
+          "score": 100
+        },
+        {
+          "id": "elevator",
+          "text": "Head for the elevator to get down quickly",
+          "correct": false,
+          "explanation": "Never use elevators during an earthquake! They may malfunction or stop between floors.",
+          "score": 0
+        },
+        {
+          "id": "stairs",
+          "text": "Run to the stairwell immediately",
+          "correct": false,
+          "explanation": "Don't run during shaking! You could fall or be hit by falling objects. Take cover first.",
+          "score": 25
+        }
+      ],
+      "follow_up": "The shaking has stopped. What's your next priority?",
+      "follow_up_choices": [
+        {
+          "id": "evacuation_plan",
+          "text": "Follow the building's evacuation plan calmly",
+          "correct": true,
+          "explanation": "Correct! Use stairs, not elevators. Follow evacuation routes and help others if possible.",
+          "score": 100
+        },
+        {
+          "id": "collect_belongings",
+          "text": "Gather your personal belongings first",
+          "correct": false,
+          "explanation": "Time is critical! Don't waste time on belongings. Focus on safe evacuation.",
+          "score": 10
+        }
+      ]
+    },
+    {
+      "id": "shopping_mall",
+      "title": "Earthquake in Shopping Mall",
+      "description": "You're shopping at a busy mall in Bangkok when a moderate earthquake begins. People start screaming and running. You're near a large window display, and items are falling from shelves nearby.",
+      "location": "mall",
+      "time": "day",
+      "magnitude": 5.9,
+      "choices": [
+        {
+          "id": "drop_cover",
+          "text": "Drop to the ground and cover your head",
+          "correct": true,
+          "explanation": "Correct! Protect yourself from falling objects. Stay away from windows and displays.",
+          "score": 100
+        },
+        {
+          "id": "follow_crowd",
+          "text": "Follow the crowd toward the exit",
+          "correct": false,
+          "explanation": "Dangerous! Crowds can cause stampedes. Take cover first, then evacuate calmly when shaking stops.",
+          "score": 20
+        },
+        {
+          "id": "against_wall",
+          "text": "Stand against the nearest wall",
+          "correct": false,
+          "explanation": "Walls can have hanging objects or windows. Better to drop and cover on the ground.",
+          "score": 60
+        }
+      ],
+      "follow_up": "After the shaking stops, how do you evacuate?",
+      "follow_up_choices": [
+        {
+          "id": "calm_evacuation",
+          "text": "Walk calmly to the nearest exit, avoiding elevators",
+          "correct": true,
+          "explanation": "Correct! Stay calm, use stairs, and be aware of aftershocks.",
+          "score": 100
+        },
+        {
+          "id": "help_others",
+          "text": "Help anyone who has fallen or is injured",
+          "correct": true,
+          "explanation": "Good! Help others if you can do so safely, but don't put yourself at risk.",
+          "score": 90
+        }
+      ]
+    },
+    {
+      "id": "school_classroom",
+      "title": "Earthquake During Class",
+      "description": "You're a teacher in a classroom with 25 students when an earthquake starts. The children are looking to you for guidance. Books are falling from shelves and the lights are swaying.",
+      "location": "school",
+      "time": "day",
+      "magnitude": 6.2,
+      "choices": [
+        {
+          "id": "duck_cover_hold",
+          "text": "Shout 'Drop, Cover, Hold On!' and demonstrate",
+          "correct": true,
+          "explanation": "Excellent! Lead by example. Clear, calm directions help prevent panic.",
+          "score": 100
+        },
+        {
+          "id": "doorway_instruction",
+          "text": "Tell students to line up in the doorway",
+          "correct": false,
+          "explanation": "Outdated and dangerous! Doorways aren't safer, and crowding causes problems.",
+          "score": 30
+        },
+        {
+          "id": "evacuate_immediately",
+          "text": "Lead students outside immediately",
+          "correct": false,
+          "explanation": "Don't move during shaking! Take cover first, then evacuate when it's safe.",
+          "score": 25
+        }
+      ],
+      "follow_up": "The shaking has stopped. How do you handle evacuation?",
+      "follow_up_choices": [
+        {
+          "id": "organized_evacuation",
+          "text": "Lead an organized evacuation to the designated assembly area",
+          "correct": true,
+          "explanation": "Perfect! Follow school procedures, keep students together, and account for everyone.",
+          "score": 100
+        },
+        {
+          "id": "send_students_home",
+          "text": "Let students go home to their families",
+          "correct": false,
+          "explanation": "Don't! Keep students safe until parents can pick them up or authorities give all-clear.",
+          "score": 20
+        }
+      ]
+    },
+    {
+      "id": "driving_car",
+      "title": "Earthquake While Driving",
+      "description": "You're driving on a busy street in Bangkok when you feel your car shaking. At first you think it's a tire problem, but then you see other cars stopping and people getting out. You realize it's an earthquake.",
+      "location": "vehicle",
+      "time": "day",
+      "magnitude": 6.0,
+      "choices": [
+        {
+          "id": "pull_over_safely",
+          "text": "Pull over safely away from buildings and power lines",
+          "correct": true,
+          "explanation": "Correct! Stop in a safe location and stay in your vehicle until shaking stops.",
+          "score": 100
+        },
+        {
+          "id": "speed_up_escape",
+          "text": "Speed up to get away from the earthquake zone",
+          "correct": false,
+          "explanation": "Dangerous! You can't outrun an earthquake, and speeding during shaking causes accidents.",
+          "score": 10
+        },
+        {
+          "id": "stop_under_overpass",
+          "text": "Stop under the nearest overpass for protection",
+          "correct": false,
+          "explanation": "Never stop under overpasses! They can collapse. Find an open area instead.",
+          "score": 0
+        }
+      ],
+      "follow_up": "You've stopped safely. What do you do next?",
+      "follow_up_choices": [
+        {
+          "id": "stay_in_car",
+          "text": "Stay in the car with seatbelt on until shaking stops",
+          "correct": true,
+          "explanation": "Correct! Your car protects you from falling debris. Don't get out during shaking.",
+          "score": 100
+        },
+        {
+          "id": "get_out_immediately",
+          "text": "Get out of the car immediately",
+          "correct": false,
+          "explanation": "Stay in your car! It provides protection from falling objects and debris.",
+          "score": 30
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "excellent": {
+      "min_score": 180,
+      "message": "Excellent earthquake response! You demonstrated proper safety knowledge and made decisions that would protect lives. You're well-prepared for earthquake emergencies."
+    },
+    "good": {
+      "min_score": 140,
+      "message": "Good earthquake response! You made mostly safe choices. Review the feedback to improve your preparedness even further."
+    },
+    "needs_improvement": {
+      "min_score": 100,
+      "message": "Your response needs improvement. Study earthquake safety guidelines and practice Drop, Cover, and Hold On. Consider taking a first aid course."
+    },
+    "dangerous": {
+      "min_score": 0,
+      "message": "Your responses could be dangerous in a real earthquake. Please study proper earthquake safety procedures immediately and consider attending a disaster preparedness workshop."
+    }
+  }
+} 

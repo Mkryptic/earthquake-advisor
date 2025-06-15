@@ -1,0 +1,13 @@
+fastapi
+uvicorn[standard]
+strands-agents
+strands-agents-tools
+boto3
+sse-starlette
+pydantic
+aiofiles
+jinja2
+python-multipart
+streamlit
+pandas
+requests 
