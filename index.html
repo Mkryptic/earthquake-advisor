@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌍 Disaster Ready: Earthquake Response Simulator</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1><i class="fas fa-globe-americas"></i> Disaster Ready</h1>
+                <p>AI-Powered Earthquake Response Simulator for Southeast Asia</p>
+                <div class="header-stats">
+                    <span class="stat"><i class="fas fa-users"></i> Community Ready</span>
+                    <span class="stat"><i class="fas fa-shield-alt"></i> Safety First</span>
+                    <span class="stat"><i class="fas fa-brain"></i> AI-Powered</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="nav-tabs">
+            <button class="tab-btn active" onclick="showTab('simulator')">
+                <i class="fas fa-play-circle"></i> Simulator
+            </button>
+            <button class="tab-btn" onclick="showTab('advisor')">
+                <i class="fas fa-robot"></i> AI Advisor
+            </button>
+            <button class="tab-btn" onclick="showTab('resources')">
+                <i class="fas fa-hospital"></i> Resources
+            </button>
+            <button class="tab-btn" onclick="showTab('education')">
+                <i class="fas fa-graduation-cap"></i> Learn
+            </button>
+        </nav>
+
+        <!-- Simulator Tab -->
+        <div id="simulator" class="tab-content active">
+            <div class="section">
+                <h2><i class="fas fa-earthquake"></i> Interactive Earthquake Scenarios</h2>
+                <p>Practice your earthquake response in realistic situations</p>
+                
+                <div class="scenario-grid">
+                    <div class="scenario-card" onclick="startScenario('home_night')">
+                        <div class="scenario-icon"><i class="fas fa-bed"></i></div>
+                        <h3>Home at Night</h3>
+                        <p>2:30 AM earthquake while sleeping</p>
+                        <span class="difficulty">Beginner</span>
+                    </div>
+                    
+                    <div class="scenario-card" onclick="startScenario('office')">
+                        <div class="scenario-icon"><i class="fas fa-building"></i></div>
+                        <h3>Office Building</h3>
+                        <p>Earthquake during work hours</p>
+                        <span class="difficulty">Intermediate</span>
+                    </div>
+                    
+                    <div class="scenario-card" onclick="startScenario('mall')">
+                        <div class="scenario-icon"><i class="fas fa-store"></i></div>
+                        <h3>Shopping Mall</h3>
+                        <p>Crowded public space emergency</p>
+                        <span class="difficulty">Advanced</span>
+                    </div>
+                    
+                    <div class="scenario-card" onclick="startScenario('school')">
+                        <div class="scenario-icon"><i class="fas fa-school"></i></div>
+                        <h3>School Classroom</h3>
+                        <p>Protecting students during earthquake</p>
+                        <span class="difficulty">Expert</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scenario Player -->
+            <div id="scenario-player" class="scenario-player hidden">
+                <div class="scenario-header">
+                    <h3 id="scenario-title"></h3>
+                    <div class="scenario-controls">
+                        <span id="scenario-score">Score: 0</span>
+                        <button onclick="exitScenario()" class="btn-secondary">Exit</button>
+                    </div>
+                </div>
+                
+                <div class="scenario-content">
+                    <div id="scenario-description" class="scenario-description"></div>
+                    <div id="scenario-choices" class="scenario-choices"></div>
+                    <div id="scenario-feedback" class="scenario-feedback hidden"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Advisor Tab -->
+        <div id="advisor" class="tab-content">
+            <div class="section">
+                <h2><i class="fas fa-robot"></i> Emergency AI Advisor</h2>
+                <p>Get instant earthquake safety advice (Demo Mode)</p>
+                
+                <div class="chat-container">
+                    <div id="chat-messages" class="chat-messages">
+                        <div class="message bot-message">
+                            <i class="fas fa-robot"></i>
+                            <div class="message-content">
+                                <p>Hello! I'm your Emergency AI Advisor. Ask me about earthquake safety, emergency procedures, or regional resources for Thailand and Myanmar.</p>
+                                <p><strong>Try asking:</strong></p>
+                                <ul>
+                                    <li>"What should I do during an earthquake?"</li>
+                                    <li>"How do I prepare an emergency kit?"</li>
+                                    <li>"What are the emergency numbers in Bangkok?"</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="chat-input-container">
+                        <input type="text" id="chat-input" placeholder="Ask about earthquake safety..." onkeypress="if(event.key==='Enter') sendMessage()">
+                        <button onclick="sendMessage()" class="chat-send-btn">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources Tab -->
+        <div id="resources" class="tab-content">
+            <div class="section">
+                <h2><i class="fas fa-hospital"></i> Emergency Resources</h2>
+                
+                <div class="resources-grid">
+                    <div class="resource-section">
+                        <h3><i class="fas fa-flag"></i> Thailand</h3>
+                        <h4>Emergency Numbers</h4>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-phone"></i> General Emergency: <strong>191</strong></li>
+                            <li><i class="fas fa-ambulance"></i> Medical Emergency: <strong>1669</strong></li>
+                            <li><i class="fas fa-fire"></i> Fire Department: <strong>199</strong></li>
+                            <li><i class="fas fa-shield-alt"></i> Tourist Police: <strong>1155</strong></li>
+                        </ul>
+                        
+                        <h4>Major Hospitals - Bangkok</h4>
+                        <ul class="hospital-list">
+                            <li><i class="fas fa-hospital"></i> Siriraj Hospital</li>
+                            <li><i class="fas fa-hospital"></i> Chulalongkorn Hospital</li>
+                            <li><i class="fas fa-hospital"></i> Ramathibodi Hospital</li>
+                            <li><i class="fas fa-hospital"></i> Bumrungrad Hospital</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="resource-section">
+                        <h3><i class="fas fa-flag"></i> Myanmar</h3>
+                        <h4>Emergency Numbers</h4>
+                        <ul class="contact-list">
+                            <li><i class="fas fa-phone"></i> Emergency: <strong>999</strong></li>
+                            <li><i class="fas fa-ambulance"></i> Medical: <strong>192</strong></li>
+                            <li><i class="fas fa-fire"></i> Fire: <strong>191</strong></li>
+                        </ul>
+                        
+                        <h4>Major Hospitals - Yangon</h4>
+                        <ul class="hospital-list">
+                            <li><i class="fas fa-hospital"></i> Yangon General Hospital</li>
+                            <li><i class="fas fa-hospital"></i> North Okkalapa Hospital</li>
+                            <li><i class="fas fa-hospital"></i> Insein General Hospital</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Education Tab -->
+        <div id="education" class="tab-content">
+            <div class="section">
+                <h2><i class="fas fa-graduation-cap"></i> Earthquake Safety Education</h2>
+                
+                <div class="education-grid">
+                    <div class="education-card">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Before an Earthquake</h3>
+                        <ul>
+                            <li>Create an emergency plan with your family</li>
+                            <li>Identify safe spots in each room</li>
+                            <li>Secure heavy furniture and appliances</li>
+                            <li>Keep emergency supplies ready</li>
+                            <li>Know how to turn off gas, water, and electricity</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3><i class="fas fa-bolt"></i> During an Earthquake</h3>
+                        <ul>
+                            <li><strong>Drop</strong>: Get down on hands and knees</li>
+                            <li><strong>Cover</strong>: Take cover under a desk/table</li>
+                            <li><strong>Hold On</strong>: Hold onto shelter and protect head</li>
+                            <li>Stay where you are until shaking stops</li>
+                            <li>If outdoors, move away from buildings</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3><i class="fas fa-check-circle"></i> After an Earthquake</h3>
+                        <ul>
+                            <li>Check for injuries and provide first aid</li>
+                            <li>Check for hazards (gas leaks, electrical damage)</li>
+                            <li>Use flashlights, not candles</li>
+                            <li>Stay out of damaged buildings</li>
+                            <li>Listen to emergency broadcasts</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="education-card">
+                        <h3><i class="fas fa-kit-medical"></i> Emergency Kit Essentials</h3>
+                        <ul>
+                            <li>Water (1 gallon per person per day)</li>
+                            <li>Non-perishable food (3+ days)</li>
+                            <li>Flashlight and extra batteries</li>
+                            <li>First aid kit and medications</li>
+                            <li>Whistle, radio, phone chargers</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p><i class="fas fa-heart"></i> Built for Southeast Asia earthquake preparedness</p>
+                <p>🚨 <strong>In a real emergency, call local emergency services immediately!</strong> 🚨</p>
+                <div class="footer-links">
+                    <a href="https://github.com/Mkryptic/earthquake-advisor" target="_blank">
+                        <i class="fab fa-github"></i> View on GitHub
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
